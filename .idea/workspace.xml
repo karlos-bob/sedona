@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d999bc00-7a3f-4a2e-9a09-4b02ecfeb250" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/scss/_media.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/scss/_media.scss" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -21,7 +21,7 @@
           <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="763">
+                <state relative-caret-position="712">
                   <caret line="88" column="39" lean-forward="true" selection-start-line="88" selection-start-column="39" selection-end-line="88" selection-end-column="39" />
                   <folding>
                     <element signature="n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" />
@@ -70,8 +70,8 @@
               <file leaf-file-name="header.scss" pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/app/scss/partials/header.scss">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="311">
-                      <caret line="158" column="4" lean-forward="true" selection-start-line="158" selection-start-column="4" selection-end-line="158" selection-end-column="4" />
+                    <state relative-caret-position="362">
+                      <caret line="162" lean-forward="true" selection-start-line="162" selection-end-line="162" />
                     </state>
                   </provider>
                 </entry>
@@ -125,8 +125,8 @@
               <file leaf-file-name="_media.scss" pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/app/scss/_media.scss">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="213">
-                      <caret line="149" column="19" selection-start-line="149" selection-start-column="19" selection-end-line="149" selection-end-column="19" />
+                    <state relative-caret-position="511">
+                      <caret line="193" column="3" lean-forward="true" selection-start-line="193" selection-start-column="3" selection-end-line="193" selection-end-column="3" />
                       <folding>
                         <element signature="e#469#500#0" />
                         <element signature="e#461#471#0" />
@@ -134,6 +134,7 @@
                         <element signature="e#1370#1398#0" />
                         <element signature="e#1438#1448#0" />
                         <element signature="e#1448#1475#0" />
+                        <element signature="e#1715#1898#0" />
                         <element signature="e#1919#1974#0" />
                         <element signature="e#2047#2061#0" />
                         <element signature="e#2017#2072#0" />
@@ -297,12 +298,12 @@
       <workItem from="1545060413863" duration="402000" />
       <workItem from="1545061267599" duration="8262000" />
       <workItem from="1547828666955" duration="8837000" />
-      <workItem from="1547877306066" duration="38407000" />
+      <workItem from="1547877306066" duration="38993000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58477000" />
+    <option name="totallyTimeSpent" value="59063000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1688" y="22" width="1696" height="1036" extended-state="6" />
@@ -703,32 +704,9 @@
     <entry file="file://$PROJECT_DIR$/app/img/icon-gift.svg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/scss/_media.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="149" column="19" selection-start-line="149" selection-start-column="19" selection-end-line="149" selection-end-column="19" />
-          <folding>
-            <element signature="e#469#500#0" />
-            <element signature="e#461#471#0" />
-            <element signature="e#1251#1282#0" />
-            <element signature="e#1370#1398#0" />
-            <element signature="e#1438#1448#0" />
-            <element signature="e#1448#1475#0" />
-            <element signature="e#1919#1974#0" />
-            <element signature="e#2047#2061#0" />
-            <element signature="e#2017#2072#0" />
-            <element signature="e#2010#2065#0" />
-            <element signature="e#2116#2171#0" />
-            <element signature="e#2334#2348#0" />
-            <element signature="e#2299#2800#0" />
-            <element signature="e#2924#2934#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="763">
+        <state relative-caret-position="712">
           <caret line="88" column="39" lean-forward="true" selection-start-line="88" selection-start-column="39" selection-end-line="88" selection-end-column="39" />
           <folding>
             <element signature="n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" />
@@ -750,8 +728,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/scss/partials/header.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="158" column="4" lean-forward="true" selection-start-line="158" selection-start-column="4" selection-end-line="158" selection-end-column="4" />
+        <state relative-caret-position="362">
+          <caret line="162" lean-forward="true" selection-start-line="162" selection-end-line="162" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scss/_media.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="511">
+          <caret line="193" column="3" lean-forward="true" selection-start-line="193" selection-start-column="3" selection-end-line="193" selection-end-column="3" />
+          <folding>
+            <element signature="e#469#500#0" />
+            <element signature="e#461#471#0" />
+            <element signature="e#1251#1282#0" />
+            <element signature="e#1370#1398#0" />
+            <element signature="e#1438#1448#0" />
+            <element signature="e#1448#1475#0" />
+            <element signature="e#1715#1898#0" />
+            <element signature="e#1919#1974#0" />
+            <element signature="e#2047#2061#0" />
+            <element signature="e#2017#2072#0" />
+            <element signature="e#2010#2065#0" />
+            <element signature="e#2116#2171#0" />
+            <element signature="e#2334#2348#0" />
+            <element signature="e#2299#2800#0" />
+            <element signature="e#2924#2934#0" />
+          </folding>
         </state>
       </provider>
     </entry>
