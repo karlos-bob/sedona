@@ -18,11 +18,13 @@
 body {
 	font-size: 16px;
 	min-width: 320px;
+	max-width: 1200px;
 	position: relative;
 	line-height: 1.65;
 	font-family: $default-font;
 	overflow-x: hidden;
 	color: $text;
+	margin: 0 auto;
 	input, textarea {
 		border: #666 1px solid;
 		outline: none;
@@ -56,7 +58,7 @@ b, strong {
 	font-weight: bold;
 }
 a {
-	text-decoration: none;
+	text-decoration: none!important;
 }
 
 //Template elements
@@ -66,6 +68,8 @@ a {
 	height: 54px;
 	display: block;
 	background-image: url(../img/triangle.png);
+	background-repeat: no-repeat;
+	background-size: cover;
   }
 
 .template_triangle--small {
@@ -73,6 +77,8 @@ a {
 	height: 37px;
 	display: block;
 	background-image: url(../img/triangle-small.png);
+	background-repeat: no-repeat;
+	//background-size: cover;
   }
 
 .template_triangleFake {
