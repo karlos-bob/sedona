@@ -5,6 +5,7 @@
 /*Модули сайта*/
 @import "partials/header";
 @import "partials/indexContent";
+@import "partials/footer";
 
 ::placeholder {
 	color: #666;
@@ -25,6 +26,7 @@ body {
 	overflow-x: hidden;
 	color: $text;
 	margin: 0 auto;
+	background-color: #F2F2F2;
 	input, textarea {
 		border: #666 1px solid;
 		outline: none;
@@ -39,6 +41,19 @@ body {
 	h1, h2, h3, p, span {
 		margin: 0;
 	}
+
+	.allPageWrapper {
+		background-color: #FFF;
+		-webkit-box-shadow: 0 0 30px 1px rgba(0,0,0,.24);
+		-moz-box-shadow: 0 0 30px 1px rgba(0,0,0,.24);
+		box-shadow: 0 0 30px 1px rgba(0,0,0,.24);
+	}
+}
+b, strong {
+	font-weight: bold;
+}
+a {
+	text-decoration: none!important;
 }
 
 .img-responsive {
@@ -54,15 +69,7 @@ body {
 	text-align: center;
 }
 
-b, strong {
-	font-weight: bold;
-}
-a {
-	text-decoration: none!important;
-}
-
 //Template elements
-
 .template_triangle--big {
 	width: 100%;
 	height: 54px;

@@ -15,6 +15,7 @@
     "gulp-autoprefixer": "^6.0.0",
     "gulp-clean-css": "^4.0.0",
     "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^5.0.3",
     "gulp-notify": "^3.2.0",
     "gulp-rename": "^1.4.0",
     "gulp-rsync": "0.0.8",
@@ -23,6 +24,8 @@
     "gulp-util": "^3.0.8"
   },
   "dependencies": {
-    "jslint": "^0.12.0"
+    "gulp-rigger": "^0.5.8",
+    "jslint": "^0.12.0",
+    "save-dev": "^2.0.0"
   }
 }
