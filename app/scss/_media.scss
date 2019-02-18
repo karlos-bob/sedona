@@ -1,17 +1,17 @@
 @import "vars";
 
 
-//ДО
+//====================ДО====================
 
 /*==========  Desktop First  ==========*/
 
-// ≥1200px
+// ≥1200px ДО
 @include media-breakpoint-down(lg) {
 
 
 }
 
-// ≥992px
+// ≥992px ДО
 @include media-breakpoint-down(md) {
 
   header {
@@ -24,21 +24,19 @@
 
 }
 
-// ≥768px
+// ≥768px ДО
 @include media-breakpoint-down(sm) {
 
-    header {
 
-      .header__logo--mobile {
-        display: block;
-      }
 
+  header {
+    .header__logo--mobile {
+      display: block;
     }
-
-
+  }
 }
 
-// ≥576px
+// ≥576px ДО
 @include media-breakpoint-down(xs) {
 
   .menu-open nav {
@@ -59,14 +57,20 @@
         height: 100vh;
         ul {
           flex-direction: column;
+
+          li.nav__logoHack {
+            display: none;
+          }
+
         }
+
       }
+
     }
 
-    //--------JS CLASS FOR BURGER-MENU ANIMATION--------
-
-
   }
+
+
 
   .navSpace {
     background-color: #fff;
@@ -79,20 +83,7 @@
     background-position: 50%, left;
     padding: 10% 5%;
 
-    img {
-      object-fit: scale-down;
-      width: 100%;
-      height: 100%;
-    }
-
   }
-
-
-
-
-
-
-
 
   footer {
     height: 246px;
@@ -117,21 +108,68 @@
 
 
 
-//ОТ
+//====================ОТ==============================
 
 /*==========  Mobile First  ==========*/
 
-// ≤576px
+// ≤576px ОТ
 @include media-breakpoint-up(sm) {
-  header .header__menu {
-    display: block;
+
+
+  header  {
+
+    .header__burgerIcon {
+      display: none;
+    }
+
+    nav {
+      transition: none;
+
+      .nav__container {
+        padding: 0 3%;
+        ul {
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+
+          li {
+
+            a {
+              text-transform: uppercase;
+            }
+
+            i {
+              display: none;
+
+
+            }
+
+          }
+
+        }
+      }
+
+      a.header__logo {
+        height: 85px;
+        width: 100px;
+
+        img {
+          width: 100%;
+        }
+
+      }
+
+    }
+
   }
+
 }
 
-// ≤768px
+// ≤768px ОТ
 @include media-breakpoint-up(md) {
 
   header {
+
 
     .header__menu {
       display: none;
@@ -139,22 +177,20 @@
 
     nav {
       position: absolute;
-      transform: none;
+      //transform: none;
       transition: none;
-
-      height: 56px;
-      box-shadow: none;
+      box-shadow: 0 3rem 3rem rgba(0,0,0,0.05);
 
       z-index: 996;
 
       .nav__container {
-        width: 90%;
+        width: 100%;
         height: 100%;
-        //padding: 0 18px;
 
         ul {
-          flex-direction: row;
-          justify-content: space-between;
+          //flex-direction: row;
+          //justify-content: space-between;
+          //align-items: center;
 
           li {
             text-align: center;
@@ -164,7 +200,6 @@
             }
 
             a {
-              text-transform: uppercase;
               font-size: 13pt;
 
               &:hover {
@@ -175,10 +210,16 @@
 
           }
 
-          .nav__logoHack {
-            display: block;
-          }
+        }
 
+      }
+
+      a.header__logo {
+        height: 85px;
+        width: 100px;
+
+        img {
+          width: 100%;
         }
 
       }
@@ -188,8 +229,11 @@
   }
 
   .bgImageWrap {
-    padding: 120px 20% 110px;
-    height: 720px;
+    //padding: 120px 20% 110px;
+    height: 520px;
+    background-size: 150% 100%;
+    background-position: 45%, left;
+    padding: 6% 22% 10%;
   }
 
   .menu-open nav {
@@ -308,7 +352,7 @@
 
 }
 
-// ≤992px
+// ≤992px ОТ
 @include media-breakpoint-up(lg) {
 
   header nav {
@@ -365,7 +409,7 @@
 
 }
 
-// ≤1200px
+// ≤1200px ОТ
 @include media-breakpoint-up(xl) {
 
 

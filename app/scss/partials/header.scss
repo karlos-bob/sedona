@@ -1,5 +1,7 @@
 header {
   position: relative;
+  height: 60px;
+  background-color: #fff;
   //box-shadow: 0 3rem 3rem rgba(0,0,0,0.2);
 
   nav  {
@@ -7,18 +9,18 @@ header {
     position: fixed;
     transition: transform 0.5s cubic-bezier(0.56, 0.1, 0.34, 0.91);
     z-index: 998;
-    //margin: $centered;
+    height: inherit;
+
 
     .nav__container {
       display: block;
-      background-color: #fff;
-      box-shadow: 0 3rem 3rem rgba(0,0,0,0.2);
-      padding: 0 5%;
 
-      //margin: $centered;
+      padding: 0 5%;
 
       ul {
         display: flex;
+        height: inherit;
+        //max-width: 100%;
         //width: 100%;
 
         li {
@@ -29,6 +31,10 @@ header {
 
           &:last-child {
             box-shadow: 0 1px 5px rgba(255, 255, 255, 0.2);
+          }
+
+          i {
+            display: inline-block;
           }
 
           i.leftIcons {
@@ -47,17 +53,13 @@ header {
             text-decoration: none;
             font-family: $default-font;
             font-weight: bold;
-            //text-transform: uppercase;
+
             &:hover  {
               font-size: 20px;
               color: $sedona_blue;
             }
           }
 
-        }
-
-        .nav__logoHack {
-          display: none;
         }
       }
 
@@ -134,13 +136,11 @@ header {
 
   a.header__logo {
     position: absolute;
-    width: 100%;
 
-    //margin-left: auto;
-    //margin-right: auto;
-    //left: 0;
-    //right: 0;
     top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
     z-index: 997;
 
     img {
@@ -152,13 +152,13 @@ header {
     }
 
     img.header__logo--mobile {
-      width: 100px;
-      height: 85px;
+      //width: 100px;
+      //height: 85px;
     }
 
     img.header__logo--desktop {
       width: 184px;
-      height: 100px;
+      //height: 100px;
     }
 
   }
