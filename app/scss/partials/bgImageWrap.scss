@@ -1,0 +1,20 @@
+.bgImageWrap {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+
+  //background: url("../img/back-desktop.png") 100% 100% no-repeat;
+  background: url("../img/back-desktop.png");
+  background-repeat: no-repeat;
+
+
+
+  .template_triangle--big {
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    background-position: 50%, right;
+  }
+
+}

@@ -4,6 +4,15 @@ $sedona_blue: #81b3d2;
 $sedona_gray: #eeeeee;
 $text: #333;
 
+$centered: 0 auto;
+
+//Mixins
+@mixin maxPageWidth {
+  max-width: 1200px;
+  width: 100%;
+}
+
+
 // Customization Bootstrap vars from "app/libs/bootstrap/scss/_variables.scss"
 $grid-gutter-width: 30px;
 $grid-columns: 12;

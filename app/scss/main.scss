@@ -4,6 +4,7 @@
 @import "libs";
 /*Модули сайта*/
 @import "partials/header";
+@import "partials/bgImageWrap";
 @import "partials/indexContent";
 @import "partials/footer";
 
@@ -18,8 +19,6 @@
 
 body {
 	font-size: 16px;
-	min-width: 320px;
-	max-width: 1200px;
 	position: relative;
 	line-height: 1.65;
 	font-family: $default-font;
@@ -43,27 +42,47 @@ body {
 	}
 
 	.allPageWrapper {
-		background-color: #FFF;
+		background-color: #f8f8f8;
 		-webkit-box-shadow: 0 0 30px 1px rgba(0,0,0,.24);
 		-moz-box-shadow: 0 0 30px 1px rgba(0,0,0,.24);
 		box-shadow: 0 0 30px 1px rgba(0,0,0,.24);
+
+		//Sticky footer
+		display: flex;
+		min-height: 100vh;
+		flex-direction: column;
+
 	}
 }
+
 b, strong {
 	font-weight: bold;
 }
+
 a {
 	text-decoration: none!important;
 }
 
+dl, ol, ul {
+	margin: 0;
+}
+
+
+//СДЕЛАТЬ МИКСИНОМ!
 .img-responsive {
 	display: block;
-	max-width: 100%;
-	height: auto;
-	&.img-width {
-		width: 100%;
-	}
+
+	//margin: $centered;
+	//max-width: 100%;
+	//width: 100%;
+	//max-height: 100%;
+	//height: auto;
+
+	//max-width: 100%;
+	//width: auto;
+	//height: 100%;
 }
+//СДЕЛАТЬ МИКСИНОМ!
 
 .text-center {
 	text-align: center;
