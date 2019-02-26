@@ -16,7 +16,7 @@
 
   header {
 
-    .header__logo > .header__logo--desktop {
+    .navSpace > .header__logo > .header__logo--desktop {
       display: none;
     }
 
@@ -30,9 +30,15 @@
 
 
   header {
+
     .header__logo--mobile {
       display: block;
     }
+
+    li.nav__logoHack {
+      width: 100px;
+    }
+
   }
 }
 
@@ -40,23 +46,55 @@
 @include media-breakpoint-down(xs) {
 
   .menu-open nav {
-    transform: translateX(0);
+     display: block;
+   }
+
+  .menu-open .navSpace {
+    height: 82px;
   }
 
   header {
+    height: auto;
 
-    .header__burgerIcon {
-      display: block;
+    .navSpace {
+
+      .burgerWrap {
+        display: block;
+      }
+
     }
 
     nav {
-      transform: translateX(-50rem);
+      display: none;
+      height: 100%;
 
       .nav__container {
-        width: 66%;
-        height: 100vh;
+        display: block;
+        width: 100%;
+        height: auto;
+        background-color: $sedona_blue;
+
         ul {
           flex-direction: column;
+          justify-content: space-between;
+          align-items: stretch;
+          //align-content: baseline;
+
+          li  {
+            text-align: center;
+            box-shadow: 0 1px 0 rgba(1, 1, 1, 0.2);
+            padding: 20px 0;
+
+            &:last-child {
+              box-shadow: none;
+            }
+
+            a {
+              color: #fff;
+              text-transform: uppercase;
+            }
+
+          }
 
           li.nav__logoHack {
             display: none;
@@ -68,13 +106,6 @@
 
     }
 
-  }
-
-
-
-  .navSpace {
-    background-color: #fff;
-    height: 60px;
   }
 
   .bgImageWrap {
@@ -129,19 +160,19 @@
         padding: 0 3%;
         ul {
           flex-direction: row;
-          justify-content: space-between;
+          //justify-content: space-between; c space-around вроде бы лучше
           align-items: center;
+          justify-content: space-around;
 
           li {
 
             a {
               text-transform: uppercase;
+              color: #000;
             }
 
             i {
               display: none;
-
-
             }
 
           }
@@ -169,7 +200,7 @@
 @include media-breakpoint-up(md) {
 
   header {
-
+    height: 60px;
 
     .header__menu {
       display: none;
@@ -180,7 +211,7 @@
       //transform: none;
       transition: none;
       box-shadow: 0 3rem 3rem rgba(0,0,0,0.05);
-
+      margin: 0 auto;
       z-index: 996;
 
       .nav__container {
@@ -188,9 +219,6 @@
         height: 100%;
 
         ul {
-          //flex-direction: row;
-          //justify-content: space-between;
-          //align-items: center;
 
           li {
             text-align: center;
@@ -210,11 +238,16 @@
 
           }
 
+          li.nav__logoHack {
+            width: 184px;
+          }
+
         }
 
       }
 
       a.header__logo {
+        position: absolute;
         height: 85px;
         width: 100px;
 
