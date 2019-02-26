@@ -29,7 +29,31 @@
 
 
 
+
   header {
+
+
+    .navSpace {
+      //height: 224px;
+
+
+      .burgerWrap {
+        display: block;
+      }
+
+    }
+
+    nav {
+      display: block;
+      width: 100%;
+      height: 100%;
+      order: 1;
+
+      .nav__container {
+        background-color: $sedona_blue;
+      }
+
+    }
 
     .header__logo--mobile {
       display: block;
@@ -40,23 +64,33 @@
     }
 
   }
+
+  //.bgImageWrap {
+  //
+  //}
+
 }
 
 // ≥576px ДО
 @include media-breakpoint-down(xs) {
 
   .menu-open nav {
-     display: block;
-   }
+    display: block;
+    order: 1;
+  }
 
   .menu-open .navSpace {
-    height: 82px;
+    order: 2;
   }
 
   header {
     height: auto;
+    display: flex;
+    flex-direction: column;
 
     .navSpace {
+
+      position: relative;
 
       .burgerWrap {
         display: block;
@@ -112,7 +146,7 @@
     height: 390px;
     background-size: 223% 100%;
     background-position: 50%, left;
-    padding: 10% 5%;
+    //padding: 10% 5%;
 
   }
 
@@ -149,15 +183,18 @@
 
   header  {
 
-    .header__burgerIcon {
+    .navSpace .burgerWrap {
       display: none;
     }
 
     nav {
       transition: none;
+      height: 60px;
 
       .nav__container {
         padding: 0 3%;
+        background-color: #fff;
+        height: 100%;
         ul {
           flex-direction: row;
           //justify-content: space-between; c space-around вроде бы лучше
@@ -180,11 +217,14 @@
         }
       }
 
-      a.header__logo {
+      .navSpace a.header__logo {
+        display: block;
         height: 85px;
         width: 100px;
 
+
         img {
+          //display: block;
           width: 100%;
         }
 
@@ -202,10 +242,29 @@
   header {
     height: 60px;
 
+
     .header__menu {
       display: none;
     }
+    .navSpace {
+      //background-color: #fff;
 
+      a.header__logo {
+
+        //width: 188px;
+        //height: 96px;
+
+        img.header__logo--mobile {
+          display: block;
+        }
+
+
+        img.header__logo--desktop {
+          display: none;
+        }
+      }
+
+    }
     nav {
       position: absolute;
       //transform: none;
@@ -213,6 +272,13 @@
       box-shadow: 0 3rem 3rem rgba(0,0,0,0.05);
       margin: 0 auto;
       z-index: 996;
+      display: block;
+
+
+      top: 0;
+      left: 0;
+      right: 0;
+
 
       .nav__container {
         width: 100%;
@@ -246,17 +312,6 @@
 
       }
 
-      a.header__logo {
-        position: absolute;
-        height: 85px;
-        width: 100px;
-
-        img {
-          width: 100%;
-        }
-
-      }
-
     }
 
   }
@@ -266,12 +321,12 @@
     height: 520px;
     background-size: 150% 100%;
     background-position: 45%, left;
-    padding: 6% 22% 10%;
+    //padding: 6% 22% 10%;
   }
 
-  .menu-open nav {
-    transform: none;
-  }
+  //.menu-open nav {
+  //  transform: none;
+  //}
 
 
   .index__content > .index__intro {
@@ -389,28 +444,39 @@
 @include media-breakpoint-up(lg) {
 
   header nav {
-    display: block;
-    position: static;
+    //display: block;
+    //position: absolute;
+    //
+    //top: 0;
+    //left: 0;
+    //right: 0;
+    //margin: 0 auto;
+
   }
 
-  header a.header__logo {
-    //width: 188px;
-    //height: 96px;
+  header .navSpace {
 
-    img.header__logo--mobile {
-      display: none;
+    a.header__logo {
+
+      //width: 188px;
+      //height: 96px;
+
+      img.header__logo--mobile {
+        display: none;
+      }
+
+
+      img.header__logo--desktop {
+        display: block;
+      }
+
+
     }
-
-
-    img.header__logo--desktop {
-      display: block;
-    }
-
 
   }
 
   .bgImageWrap {
-    padding: 80px 20% 110px;
+    //padding: 80px 20% 110px;
   }
 
 
