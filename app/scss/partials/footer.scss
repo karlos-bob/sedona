@@ -1,14 +1,17 @@
 footer {
+  flex: 0 0 auto;
   width: 100%;
+  margin-top: auto;
 
   .footer__wrap {
     @include maxPageWidth;
+    height: 100%;
     margin: $centered;
 
     display: flex;
     display: -webkit-flex;
     text-transform: uppercase;
-
+    background-color: #fff;
 
     .footer__linksWrap {
       display: block;

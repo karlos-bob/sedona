@@ -17,6 +17,10 @@
 	color: #fff;
 }
 
+html, body {
+	height: 100%;
+}
+
 body {
 	font-size: 16px;
 	position: relative;
@@ -26,6 +30,11 @@ body {
 	color: $text;
 	margin: 0 auto;
 	background-color: #F2F2F2;
+
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+
 	input, textarea {
 		border: #666 1px solid;
 		outline: none;
@@ -41,16 +50,29 @@ body {
 		margin: 0;
 	}
 
-	.allPageWrapper {
+	main {
+		height: 100%;
 		background-color: #f8f8f8;
-		-webkit-box-shadow: 0 0 30px 1px rgba(0,0,0,.24);
-		-moz-box-shadow: 0 0 30px 1px rgba(0,0,0,.24);
-		box-shadow: 0 0 30px 1px rgba(0,0,0,.24);
 
 		//Sticky footer
 		display: flex;
-		min-height: 100vh;
 		flex-direction: column;
+		justify-content: stretch;
+
+
+		.contentWrap {
+			@include maxPageWidth;
+
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+
+			flex: 1 0 auto;
+			margin: $centered;
+			font-family: $default-font;
+			background-color: #fff;
+			z-index: 998;
+		}
 
 	}
 }

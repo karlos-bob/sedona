@@ -33,17 +33,17 @@
 
 <body>
 <!-- Custom HTML -->
-<div class="allPageWrapper">
+<main>
 
     <header>
 
         <div class="navSpace">
 
 
-            <a class="header__logo" href="index.html" >
-                <img class="header__logo--mobile" src="img/logo.png" alt="logo">
-                <img class="header__logo--desktop" src="img/logotype-desktop.png"alt="logo-desktop">
-            </a>
+            <div class="header__logo"  >
+                <a href="index.html"><img class="header__logo--mobile" src="img/logo.png" alt="logo"></a>
+                <a href="index.html"><img class="header__logo--desktop" src="img/logotype-desktop.png"alt="logo-desktop"></a>
+            </div>
 
             <div class="burgerWrap">
                 <div class="header__burgerIcon">
@@ -66,7 +66,7 @@
                     <li class="nav__logoHack"></li>
                     <!--LOGO HACK-->
                     <li>
-                        <a href="../form.html">Форма Отзыва</a>
+                        <a href="form.html">Форма Отзыва</a>
                     </li>
                     <li>
                         <a href="#">My Git</a>
@@ -78,43 +78,47 @@
     </header>
 
 
-		<div class="index__content">
+<div class="contentWrap">
 
-			<div class="bgImageWrap bgImageWrap--index">
-			    <img src="img/text-index.png" alt="text-index">
-			    <div class="template_triangle--big"></div>
-			</div>
+	<div class="bgImageWrap bgImageWrap--index">
+	    <img src="img/text-index.png" alt="text-index">
+	    <div class="template_triangle--big"></div>
+	</div>
 
-			<div class="index__intro">
-					<div class="index__introTextWrap">
-						<h3>СЕДОНА — небольшой
+	<div class="index__intro">
+		<div class="index__introTextWrap">
+			<h3>СЕДОНА — небольшой
 							городок в АРИЗОНЕ,
 							зАСЛУЖИвающий большего!
-						</h3>
+			</h3>
 
-						<p>Рассмотрим 5 причин, по которым
+			<p>Рассмотрим 5 причин, по которым
 							Седона круче чем гранд каньон!
-						</p>
-					</div>
-					<div class="template_triangle--small"></div>
-				</div>
+			</p>
+		</div>
+		<div class="template_triangle--small"></div>
+	</div>
 
-			<div class="index__reasonWrap">
-					<!--Arrow hack-->
-					<div class="template_triangleFake"></div>
 
-					<!--Grid content-->
+	<!---------------------------------------->
+	<!--SECTION "REASONS" START-->
+	<div class="index__reasonWrap">
 
-					<div class="index__reason index__reason--blue gridReason1">
+		<!--Arrow hack-->
+		<div class="template_triangleFake"></div>
+
+		<!--Grid content-->
+
+		<div class="index__reason index__reason--blue gridReason1">
 						<h3>НАСТОЯЩИЙ <br> ГОРОДОК</h3>
 						<span>— №1 —</span>
 						<p>СЕДОНА НЕ АТРАКЦИОН ДЛЯ ТУРИСТОВ, <br>
 							ТАМ ТЕЧЕТ СВОЯ ЖИЗНЬ
 						</p>
 					</div>
-					<img class="index__reasonPic gridCityPhoto" src="img/photo-city.png" alt="photo-city">
-
-					<div class="index__reasonItem gridReasonItem1">
+		<img class="index__reasonPic gridCityPhoto" src="img/photo-city.png" alt="photo-city">
+			<!--REASON-ITEMS-->
+		<div class="index__reasonItem gridReasonItem1">
 						<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="75" height="72" viewBox="0 0 75 72">
 							<image id="icon-house.svg" width="75" height="72" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEsAAABICAMAAACJBPh2AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAOVBMVEWBs9L///+Bs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9IAAAD5kbl1AAAAEXRSTlMAAGDvvzBAn4BwII8Qz9+vUMoKWfEAAAABYktHRBJ7vGwAAAAACXBIWXMAAAsSAAALEgHS3X78AAAAB3RJTUUH4wETERoac2PYqwAAAeNJREFUWMPt1tu2giAQAFCCwMsBi///2RAGHG4qch6q1TyYiOyWMIMSciIoo7h5j4LffJyitNYY01GIFovaIfQ/LApjKLaG0UWbZakhwlYAnZ62qFMoxi5awcDYNQsJ6PSSFT3Z1rhi0Xj5QvOClVDbhXYro8KlZqtA+YutVpHaiqDFqlABa7CqlMfOWzsUdE5nrV0qL6c964DKymnHyqh5NDvxnyjesm+llBwgDRRHNzFUTlVrpRgaJVXYjPELhLOtnGpWSpGVUpOgQ9IB2I6VUTSsvzCD7yTF6lZGkUXrB5w+TeecYlUrp2Y8Xm0pirGilVNEmMkKDfMCG0mOlawCdWA5bMotm1cJZZ9R+sYjswi3yZhao312ksayjeeF/3KfA0NsQXJn1hiKYDbsQoqWxyIqt+Sy3vqUYmRo10otwALFppIVsqiyd6xzzzwWKC6KFuG+INmTFC3BPRYoUrFMwg9KL/dJkop181ig6tZeuFwFLFA9FmBrlbls77EspsxmB4XTZRlMmQmVkMx91o1LVNudVrRPgOV+oDHGn992Y3X5D1XwHZYSPoZmS5pR/rha27sHGqZH+uOBFUXJ6ljHzOqYr2+03nUdf9bP+lQr26O/zZpFHLzDOowPsoTuDPHO1gulYFwM1zW7ygAAAABJRU5ErkJggg=="/>
 						</svg>
@@ -126,7 +130,7 @@
 							</p>
 						</div>
 					</div>
-					<div class="index__reasonItem gridReasonItem2">
+		<div class="index__reasonItem gridReasonItem2">
 						<!--<img src="img/icon-gift.svg" alt="icon-gift">-->
 						<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="64" height="75" viewBox="0 0 64 75">
 							<image id="icon-gift.svg" width="64" height="75" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABLCAMAAAD3cHEvAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAANlBMVEWBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9IAAAAmK4+CAAAAEHRSTlMAYK9AMM+P758Q31BwgCC/I7VQWgAAAAFiS0dEEeK1PboAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfjARMRHRIy+cZeAAABj0lEQVRYw+2Vy5KEIAxFQUReivz/104CGrAE7dZZTE1xV21DDjckUcaO4kMADYI90yjDpulZvAokfVoVwnwSbyfnJnXyIGJqdr4EWNiyZJQrlqbdmBzb8RzWeWHGZsc6p6baBDA50IMjN6AZ3QPbYR6yCVAH17BXbRZ8toMum/cAa0X5fbaACezG9YUFWZhOWy2hqKgLPLQAOptGib0QGONP2IrwpKF4ltvBtjAgqi22azqu4t2Do7FoCayu8k2AwUkYKAuf+gIyUEU8tUqTYKlTZExJUmJ4GeG6mSOBahFv3OyH+jXcnB8JaWZSP8TsXaqBiccrx27F40ivEQE/9YR1M0v619/H7yYiAtsZklpTuJo/CUeJ9F6SnIdC+u51csjDptHN4eu3b8lZladfhRt92PqdFOS1Pg+P3ti7eOg07E5REwyupl+yumXeAPUbWqinF3RarXcHdMBvAprKgItZsO8Alo32DSB+RMb6QOoSUJvGQF+J+j3eXmIO64AO6IAO6IAO6ID/CHioPwH4ATdyXVyC/QQEAAAAAElFTkSuQmCC"/>
@@ -138,7 +142,7 @@
 							</p>
 						</div>
 					</div>
-					<div class="index__reasonItem gridReasonItem3">
+		<div class="index__reasonItem gridReasonItem3">
 						<!--<img src="img/icon-burger.svg" alt="icon-burger">-->
 						<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="77" height="68" viewBox="0 0 77 68">
 							<image id="icon-burger.svg" width="77" height="68" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAE0AAABECAMAAADz2EhKAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAOVBMVEWBs9L///+Bs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9IAAAD5kbl1AAAAEXRSTlMAABBQgK+/MI/PIN+fQHDvYJCknIsAAAABYktHRBJ7vGwAAAAACXBIWXMAAAsSAAALEgHS3X78AAAAB3RJTUUH4wETERo3NryE3gAAAt5JREFUWMPll9uSpCAMhu2InFF8/5ddEo7a6tjYs7VVm4upDLSfIQTyOwxXBiOb+JqNT2yE/U9erV2ghFTruykpPqdpZtYzM0x/RNO2hGKZcy4Mhb/MlmCtvk2DxDLyLU0wyhSzhXu0eYk/dydJcPFly3yDBny3lPNEcPiJJiiwKbPEbjrHqycKT1zTPOXLVbRpY9SGAJFL+fNXNIJNJfUYAGumGc6WlFB4/pxGsObxS1r8d4trYWOMvUmiiZludsiI/dvHYxptQAtrEubgcNzTVhzS1CksvGcRpzh1RMMs2MNHBns9xd5pAt9y/MQgw5w8mcMViTcaHgFx8kQoBg4ncxgF39Pcxesv7YWBux0tlNYCXTQIpTBtaXpXpx/QXrh9ekObcaSThpHMG5raHJnPaK+p1FwcgtPCvUPDEoaGNnYvFGm6nNY4FBJp+mB0v5l8HuJQWDl/QOO5RuIQ762PSGP5OBQaZ/3G32gP7fdokj81+ZNGur8LdxTXF2jgj9yhdWHjHtBEVjyu9jxsf+m0CbWqdC/r6mI/dJEGVlQamKQWqN8u484l0RQlkSeZQu5ILp2oEIOBQrOxx+ss9iToXDMWokIgRVFcDiCzXNR0Xa62xka/MhQCYRS9l5fRNUoiU11VfpBGodmFpAAxJz65QSOM2XWDS25YuzDVTatZtndvGpcp0WtSolEakmiK8dMWRSVLWxQXrMRbhch1ybqNpfRj0Ovia/xzckPQrLryqN4a5eLqRSwat3ZvXdwXuL91Fv4xmp8e30doU9CsAxx9mvWZgsE+pxSzAzIfNJhquEakua/sgvvvaPNXaCgoB9NXDIdm4sfVl2wcyl372BZPp945hZ/x/RbOk3Lu9/Rb14dMosktzT7WvXanyX03DRV+q8mx6hbRScNvbrO5yTG4peuEvahvj9u+EBuu/zQ+7al/232XeXIHZ1jTs+beM5FFyLYDwtwjzfkMtQP+AYkvaLrRBPMaAAAAAElFTkSuQmCC"/>
@@ -152,18 +156,18 @@
 						</div>
 					</div>
 
-					<!--VOL 2-->
-					<div class="index__reason index__reason--blue gridReason2">
+		<!--VOL 2-->
+
+		<div class="index__reason index__reason--blue gridReason2">
 						<h3>Там есть мост дьявола</h3>
 						<span>— №2 —</span>
 						<p>Да, по нему можно пройти!
 							Если конечно вы осмелитесь...
 						</p>
 					</div>
-					<img class="index__reasonPic gridBridgePhoto" src="img/photo-bridge.png" alt="photo-city">
-
-
-					<div class="index__reason index__reason--gray gridReason3">
+		<img class="index__reasonPic gridBridgePhoto" src="img/photo-bridge.png" alt="photo-city">
+			<!--REASON-ITEMS-->
+		<div class="index__reason index__reason--gray gridReason3">
 						<h3>НЕБОЛЬШАЯ   ПЛОЩАДЬ</h3>
 
 						<span>— №3 —</span>
@@ -172,7 +176,7 @@
 							находятся очень близко
 						</p>
 					</div>
-					<div class="index__reason index__reason--gray gridReason4">
+		<div class="index__reason index__reason--gray gridReason4">
 						<h3>КРАСИВАЯ ДОРОГА</h3>
 
 						<span>— №4 —</span>
@@ -181,7 +185,7 @@
 							совсем НЕ СКУЧНО!
 						</p>
 					</div>
-					<div class="index__reason index__reason--gray gridReason5">
+		<div class="index__reason index__reason--gray gridReason5">
 						<h3>МАЛО ТУРИСТОВ</h3>
 
 						<span>— №5 —</span>
@@ -191,23 +195,36 @@
 						</p>
 					</div>
 
-				</div>
+	</div>
+	<!--SECTION "REASONS" FINISH-->
+	<!---------------------------------------->
 
-			<div class="index__interested">
-					<h3>ЗАИНТЕРЕСОВАЛИСЬ?</h3>
-					<p>Укажите предполагаемые даты поездки и мы покажем вам лучшие
-						предложения гостиниц в седоне
-					</p>
-					<a href="#">НАЙТИ гостиницу</a>
-				</div>
 
-			<div class="index__map">
-					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d18519.43988519626!2d-111.77905415257341!3d34.86111718116817!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sua!4v1547660850255"
-							width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen>
-					</iframe>
-			</div>
 
-		</div>
+	<!---------------------------------------->
+	<!--SECTION "INTERERSTED" START-->
+	<div class="index__interested">
+		<h3>ЗАИНТЕРЕСОВАЛИСЬ?</h3>
+		<p>Укажите предполагаемые даты поездки и мы покажем вам лучшие
+			предложения гостиниц в седоне
+		</p>
+		<a href="#">НАЙТИ гостиницу</a>
+	</div>
+	<!--SECTION "INTERESTED" FINISH-->
+	<!---------------------------------------->
+
+
+	<!---------------------------------------->
+	<!--SECTION "MAP" START-->
+	<div class="index__map">
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d18519.43988519626!2d-111.77905415257341!3d34.86111718116817!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sua!4v1547660850255"
+				width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen>
+		</iframe>
+	</div>
+	<!--SECTION "MAP" FINISH-->
+	<!---------------------------------------->
+
+</div>
 
 
 

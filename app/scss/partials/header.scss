@@ -2,9 +2,7 @@ header {
   position: relative;
   z-index: 999;
   min-height: 60px;
-  //box-shadow: 0 3rem 3rem rgba(0,0,0,0.2);
-
-
+  background-color: #fff;
 
   .navSpace {
     display: block;
@@ -13,30 +11,26 @@ header {
     width: 100%;
 
     //--------LOGO STYLE--------
-    a.header__logo {
-      display: inline-block;
+    .header__logo {
+      display: inline;
       position: absolute;
 
       top: 0;
       left: 0;
       right: 0;
-      margin: 0 auto;
+
+      margin: $centered;
 
       z-index: 999;
 
-      img {
+
+      a > img {
         height: 100%;
-        margin: $centered;
-        transition-duration: 1.2s;
-      }
+        width: 100%;
 
-      img.header__logo--mobile {
-        width: 100px;
-
-      }
-
-      img.header__logo--desktop {
-        width: 184px;
+        &:hover {
+          cursor: pointer;
+        }
 
       }
 
@@ -112,15 +106,11 @@ header {
 
 
   }
-
+  //--------NAVIGATION STYLE--------
   nav  {
     @include maxPageWidth;
-    //position: fixed;
-    transition: transform 0.5s cubic-bezier(0.56, 0.1, 0.34, 0.91);
     z-index: 998;
     height: inherit;
-
-
 
     .nav__container {
       display: block;
@@ -128,8 +118,6 @@ header {
       ul {
         display: flex;
         height: inherit;
-        //max-width: 100%;
-        //width: 100%;
 
         li {
           display: block;
@@ -144,23 +132,18 @@ header {
             font-weight: bold;
 
             &:hover  {
-              font-size: 20px;
               color: $sedona_blue;
             }
+
           }
 
         }
+
       }
 
-      //.divider {
-      //  display: block;
-      //  height: 1px;
-      //  background-color: #afb8c0;
-      //}
-
     }
-  }
 
+  }
 
 }
 
