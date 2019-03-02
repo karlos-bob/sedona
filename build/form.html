@@ -77,7 +77,73 @@
     </header>
 
 <div class="contentWrap">
-    <div class="index__form"></div>
+
+    <div class="form">
+
+        <div class="intro">
+            <div class="introTextWrap">
+                <h1>Оставьте свой отзыв</h1>
+
+                <p>Помогите нашим отелям стать лучше! Оставьте отзыв о них,
+                    А также о посещенных вами достопримичательностях
+                </p>
+            </div>
+        </div>
+
+        <div class="form__impression">
+            <form action="#">
+                <h2>Ваше общее впечатление</h2>
+                <p><input name="impression" type="radio" value="impressionGood" checked> Скорее положительное</p>
+                <p><input name="impression" type="radio" value="impressionBad"> Скорее отрицательное</p>
+                <p><input name="impression" type="radio" value="impressionUnknown"> Затрудняюсь ответить</p>
+                <!--<p><input type="submit" value="Выбрать"></p>-->
+            </form>
+        </div>
+
+        <div class="form__name">
+            <form action="#">
+                <h2>Представьтесь, пожалуйста</h2>
+                <p>Имя: <input type="text" name="firstName"></p>
+                <p>Фамилия: <input type="text" name="lastName"></p>
+                <p>Отчество: <input type="text" name="patronymic"></p>
+            </form>
+        </div>
+
+        <div class="form__contactInfo">
+            <form action="#">
+                <h2>Контактная информация</h2>
+                <p>Телефон:
+                    <input type="tel" placeholder="Введите номер">
+                    <button><i class="fas fa-phone"></i></button>
+                </p>
+                <p>Электронная почта:
+                    <input type="email" placeholder="Введите email">
+                    <button><i class="fas fa-envelope"></i></button>
+                </p>
+            </form>
+        </div>
+
+        <div class="form__visitSights">
+            <h2>Посещенные достопримечательности</h2>
+            <form>
+                <p><input type="checkbox" name="devilBridge" value="DevilBridge" checked> Мост Дьявола</p>
+                <p><input type="checkbox" name="bellRock" value="bellRock" checked> Гора-Колокол</p>
+                <p><input type="checkbox" name="slidePark" value="slidePark" checked> Слайд-парк</p>
+                <p><input type="checkbox" name="redRocks" value="redRocks"> Красные скалы</p>
+            </form>
+        </div>
+
+        <div class="form__describeEmotions">
+            <h2>Опишите свои эмоции</h2>
+            <form action="#">
+                <p><textarea name="myEmotions" placeholder="Опишите подробно все свои восторги"></textarea></p>
+            </form>
+            <a href="#">Отправить отзыв</a>
+            <p class="required">*-обязательное поле</p>
+        </div>
+
+    </div>
+
 </div>
 
 

@@ -33,6 +33,16 @@
 // ≥768px ДО
 @include media-breakpoint-down(sm) {
 
+  //Sticky nav-space --IN PROGRESS
+
+  //header {
+  //  position: sticky;
+  //  top: 0;
+  //  .navSpace {
+  //
+  //  }
+  //}
+
   header > .navSpace .burgerWrap {
     display: block;
   }
@@ -142,11 +152,12 @@
     padding: 20px 10%;
 
     h3 {
-      font-size: 3vh;
+      font-size: 2.4vh;
     }
     a {
-      max-width: 100%;
-      font-size: 2vh;
+      width: 100%;
+      font-size: 1.8vh;
+      padding: 22px 14px;
     }
   }
 

@@ -6,6 +6,7 @@
 @import "partials/header";
 @import "partials/bgImageWrap";
 @import "partials/indexContent";
+@import "partials/form";
 @import "partials/footer";
 
 ::placeholder {
@@ -19,6 +20,7 @@
 
 html, body {
 	height: 100%;
+
 }
 
 body {
@@ -28,12 +30,13 @@ body {
 	font-family: $default-font;
 	overflow-x: hidden;
 	color: $text;
-	margin: 0 auto;
+	//margin: 0 auto;
 	background-color: #F2F2F2;
 
 	display: flex;
 	flex-direction: column;
-	min-height: 100vh;
+	//min-height: 100vh;
+	min-width: 100vw;
 
 	input, textarea {
 		border: #666 1px solid;
@@ -51,23 +54,29 @@ body {
 	}
 
 	main {
-		height: 100%;
+		min-height: 100%;
 		background-color: #f8f8f8;
+		position: relative;
 
 		//Sticky footer
 		display: flex;
 		flex-direction: column;
-		justify-content: stretch;
+		//align-items: stretch;
+		//justify-content: stretch;
 
 
 		.contentWrap {
 			@include maxPageWidth;
 
+			overflow: hidden;
 			display: flex;
 			flex-direction: column;
 			align-items: center;
 
 			flex: 1 0 auto;
+			//flex-grow: 1;
+			//flex-shrink: 0;
+
 			margin: $centered;
 			font-family: $default-font;
 			background-color: #fff;
@@ -90,25 +99,10 @@ dl, ol, ul {
 }
 
 
-//СДЕЛАТЬ МИКСИНОМ!
-.img-responsive {
-	//display: block;
 
-	//margin: $centered;
-	//max-width: 100%;
-	//width: 100%;
-	//max-height: 100%;
-	//height: auto;
-
-	//max-width: 100%;
-	//width: auto;
-	//height: 100%;
-}
-//СДЕЛАТЬ МИКСИНОМ!
-
-.text-center {
-	text-align: center;
-}
+//.text-center {
+//	text-align: center;
+//}
 
 //Template elements
 .template_triangle--big {

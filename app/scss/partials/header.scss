@@ -6,9 +6,10 @@ header {
 
   .navSpace {
     display: block;
-    height: 60px;
+    min-height: 60px;
     position: absolute;
     width: 100%;
+    background-color: inherit;
 
     //--------LOGO STYLE--------
     .header__logo {
