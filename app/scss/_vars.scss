@@ -50,6 +50,20 @@ $centered: 0 auto;
 
 }
 
+.blueButton {
+  padding: 22px 44px;
+  color: #fff;
+  height: 58px;
+  background-color: #81b3d2;
+  font-weight: 700;
+  line-height: 16px;
+  font-size: 21px;
+  text-align: center;
+
+  &:hover {
+    background-color: #28be1a;
+  }
+}
 
 
 // Customization Bootstrap vars from "app/libs/bootstrap/scss/_variables.scss"

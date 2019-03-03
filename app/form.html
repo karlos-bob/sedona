@@ -2,58 +2,87 @@
 
 <div class="contentWrap">
 
-    <div class="form">
+    <div class="formContent">
 
-        <div class="intro">
-            <div class="introTextWrap">
-                <h1>Оставьте свой отзыв</h1>
+        <!--<div class="intro">-->
+            <!--<div class="introTextWrap">-->
+                <!--<h1>Оставьте свой отзыв</h1>-->
 
-                <p>Помогите нашим отелям стать лучше! Оставьте отзыв о них,
-                    А также о посещенных вами достопримичательностях
-                </p>
-            </div>
-        </div>
+                <!--<p>Помогите нашим отелям стать лучше! Оставьте отзыв о них,-->
+                    <!--А также о посещенных вами достопримичательностях-->
+                <!--</p>-->
+            <!--</div>-->
+        <!--</div>-->
 
-        <div class="form__impression">
-            <form action="#">
-                <h2>Ваше общее впечатление</h2>
-                <p><input name="impression" type="radio" value="impressionGood" checked> Скорее положительное</p>
-                <p><input name="impression" type="radio" value="impressionBad"> Скорее отрицательное</p>
-                <p><input name="impression" type="radio" value="impressionUnknown"> Затрудняюсь ответить</p>
-                <!--<p><input type="submit" value="Выбрать"></p>-->
-            </form>
-        </div>
+        <!--<div class="form__impression">-->
+            <!--<form action="#">-->
+                <!--<h2>Ваше общее впечатление</h2>-->
+                <!--<p><input name="impression" type="radio" value="impressionGood" checked> Скорее положительное</p>-->
+                <!--<p><input name="impression" type="radio" value="impressionBad"> Скорее отрицательное</p>-->
+                <!--<p><input name="impression" type="radio" value="impressionUnknown"> Затрудняюсь ответить</p>-->
+                <!--&lt;!&ndash;<p><input type="submit" value="Выбрать"></p>&ndash;&gt;-->
+            <!--</form>-->
+        <!--</div>-->
 
-        <div class="form__name">
-            <form action="#">
-                <h2>Представьтесь, пожалуйста</h2>
-                <p>Имя: <input type="text" name="firstName"></p>
-                <p>Фамилия: <input type="text" name="lastName"></p>
-                <p>Отчество: <input type="text" name="patronymic"></p>
-            </form>
-        </div>
+        <!--<div class="form__name">-->
+            <!--<h2>Представьтесь, пожалуйста:</h2>-->
+            <!--<form action="#">-->
+                <!--<p>-->
+                    <!--<span>Имя: </span>-->
+                    <!--<input type="text" name="firstName">-->
+                <!--</p>-->
+                <!--<p>-->
+                    <!--<span>Фамилия: </span>-->
+                    <!--<input type="text" name="lastName">-->
+                <!--</p>-->
+                <!--<p>-->
+                    <!--<span>Отчество: </span>-->
+                    <!--<input type="text" name="patronymic">-->
+                <!--</p>-->
+            <!--</form>-->
+        <!--</div>-->
 
-        <div class="form__contactInfo">
-            <form action="#">
-                <h2>Контактная информация</h2>
-                <p>Телефон:
-                    <input type="tel" placeholder="Введите номер">
-                    <button><i class="fas fa-phone"></i></button>
-                </p>
-                <p>Электронная почта:
-                    <input type="email" placeholder="Введите email">
-                    <button><i class="fas fa-envelope"></i></button>
-                </p>
-            </form>
-        </div>
+        <!--<div class="form__contactInfo">-->
+            <!--<h2>Контактная информация</h2>-->
+
+            <!--<form action="#">-->
+                <!--<div class="contactInfoWrap">-->
+                    <!--<p>Контактный телефон: </p>-->
+                    <!--<div class="inputWrap">-->
+                        <!--<input type="tel" placeholder="Введите номер">-->
+                        <!--<button><i class="fas fa-phone"></i></button>-->
+                        <!--<p class="formErrorMessage">Ошибка, перепроверьте номер</p>-->
+                    <!--</div>-->
+                <!--</div>-->
+
+                <!--<div class="contactInfoWrap">-->
+                    <!--<p>Электронная почта: </p>-->
+                    <!--<div class="inputWrap">-->
+                        <!--<input type="email" placeholder="Введите email">-->
+                        <!--<button><i class="fas fa-envelope"></i></button>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</form>-->
+
+        <!--</div>-->
 
         <div class="form__visitSights">
             <h2>Посещенные достопримечательности</h2>
             <form>
-                <p><input type="checkbox" name="devilBridge" value="DevilBridge" checked> Мост Дьявола</p>
-                <p><input type="checkbox" name="bellRock" value="bellRock" checked> Гора-Колокол</p>
-                <p><input type="checkbox" name="slidePark" value="slidePark" checked> Слайд-парк</p>
-                <p><input type="checkbox" name="redRocks" value="redRocks"> Красные скалы</p>
+                <p><input type="checkbox" id="devilBridge" checked/>
+                    <label for="devilBridge">Мост Дьявола</label>
+                </p>
+                <p><input type="checkbox" id="slidePar" checked/>
+                    <label for="slidePar">Слайд-пар</label>
+                </p>
+                <p>
+                    <input type="checkbox" id="bellRock" />
+                    <label for="bellRock">Гора-Колокол</label>
+                </p>
+                <p>
+                    <input type="checkbox" id="redRocks" checked/>
+                    <label for="redRocks">Красные скалыь</label>
+                </p>
             </form>
         </div>
 
@@ -62,7 +91,7 @@
             <form action="#">
                 <p><textarea name="myEmotions" placeholder="Опишите подробно все свои восторги"></textarea></p>
             </form>
-            <a href="#">Отправить отзыв</a>
+            <a href="#" class="blueButton">Отправить отзыв</a>
             <p class="required">*-обязательное поле</p>
         </div>
 

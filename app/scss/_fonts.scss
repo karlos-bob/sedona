@@ -4,3 +4,13 @@
 @include font-face("roboto-example", "../fonts/RobotoBold/RobotoBold", bold);
 
 
+@font-face {
+  font-family: "FontAwesome";
+  font-weight: normal;
+  font-display: auto;
+  font-style: normal;
+  src: url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.woff2") format("woff2");
+}
+
+
+
