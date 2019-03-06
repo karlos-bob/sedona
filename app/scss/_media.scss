@@ -33,16 +33,6 @@
 // ≥768px ДО
 @include media-breakpoint-down(sm) {
 
-  //Sticky nav-space --IN PROGRESS
-
-  //header {
-  //  position: sticky;
-  //  top: 0;
-  //  .navSpace {
-  //
-  //  }
-  //}
-
   header > .navSpace .burgerWrap {
     display: block;
   }
@@ -137,15 +127,30 @@
 
   }
 
-  .contentWrap > .index__reasonWrap .index__reasonItem {
-    max-width: 100%;
-    justify-content: center;
-  }
-
-  .contentWrap > .bgImageWrap {
+  .contentWrap > .indexContent > .bgImageWrap--index {
     height: 390px;
     background-size: 223% 100%;
     background-position: 50%, left;
+  }
+  .contentWrap > .formContent > .bgImageWrap--form {
+    background-size: 340% 340%;
+    background-position: 50% 82%;
+
+    img {
+      max-width: 70%;
+      max-height: 70%;
+
+      top: 30%;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+
+  }
+
+  .contentWrap > .index__reasonWrap .index__reasonItem {
+    max-width: 100%;
+    justify-content: center;
   }
 
   .contentWrap > .index__interested {
@@ -275,7 +280,7 @@
 
   }
 
-  .bgImageWrap {
+  .bgImageWrap--index {
     height: 520px;
     background-size: 150% 100%;
     background-position: 45%, left;

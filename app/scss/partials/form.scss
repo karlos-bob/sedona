@@ -1,217 +1,290 @@
-.formContent {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
+.contentWrap {
 
-  & > div {
+  //
+  .formContent {
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding: 25px 5%;
+    align-items: stretch;
 
-    h2 {
-      font-size: 18px;
-      font-weight: bold;
-      text-align: center;
-      text-transform: uppercase;
-    }
+    & > div {
+      position: relative;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 25px 5%;
 
-    form {
-      //width: 100%;
-
-      input {
-        font-weight: bold;
-        color: #000;
-      }
-    }
-
-    &::after {
-      //display: block;
-      //content: '';
-      //width: 100%;
-      //height: 1px;
-      //background-color: #e5e5e5;
-      //margin-top: -50px;
-    }
-  }
-
-  .intro {
-    padding: 10% 0 0;
-    order: 1;
-    .introTextWrap {
-      padding: 0;
       &:after {
+        content: '';
+        display: block;
+
+        width: 100%;
+        height: 1px;
+        background-color: #e5e5e5;
+        bottom: 0;
+        position: absolute;
+      }
+
+      h2 {
+        font-size: 18px;
+        font-weight: bold;
+        text-align: center;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+      }
+
+      form {
+        //width: 100%;
+
+        input {
+          font-weight: bold;
+          color: #000;
+        }
+      }
+
+    }
+
+    .bgImageWrap--form {
+      min-height: 160px;
+
+      &::after {
         display: none;
       }
     }
-  }
 
-  .form__impression {
-    order: 4;
-  }
 
-  .form__name {
-    order: 2;
 
-    form {
-      display: flex;
-      flex-direction: column;
+    .intro_ {
+      padding: 10% 0 0;
+      order: 1;
+      .introTextWrap {
+        padding: 0;
+        &:after {
+          display: none;
+        }
+      }
+    }
 
-      p {
+    .form__impression {
+      order: 4;
+
+     p {
+       margin: 5px 0 ;
+
+       input[type="radio"] {
+         display: none;
+       }
+
+       label {
+         font-weight: bold;
+         &:before {
+           content: " ";
+           color: #000;
+           display: inline-block;
+           /* шрифт Awesome*/
+           //font: 20px/30px FontAwesome;
+           font-family: FontAwesome;
+           font-size: 25px;
+           margin-right: 15px;
+           position: relative;
+           text-align: center;
+           align-items: center;
+           text-indent: 0;
+           width: 50px;
+           height: 50px;
+           background: #f2f2f2;
+           border: 1px solid #e3e3e3;
+           border-radius: 50%;
+           border-image: initial;
+           vertical-align: middle;
+           line-height: 200%;
+         }
+       }
+
+       input:checked + label:before {
+         /* глифон - галочка */
+         content: "\f111";
+
+
+       }
+
+       input:disabled + label:before {
+         background: #eee;
+         color: #aaa;
+       }
+
+     }
+
+    }
+
+    .form__name {
+      order: 2;
+
+      form {
+        display: flex;
+        flex-direction: column;
+
+        p {
+          width: 100%;
+          margin: 15px 0;
+          display: grid;
+          grid-template-columns: 30% 70%;
+          grid-template-rows: auto;
+          //justify-items: center;
+
+          span {
+            text-align: left;
+            text-transform: uppercase;
+            font-size: 14px;
+          }
+
+        }
+
+      }
+
+    }
+
+    .form__contactInfo {
+      order: 3;
+
+      form {
+        div.contactInfoWrap {
+          display: grid;
+          grid-template-columns: 1fr;
+          grid-template-rows: auto;
+          justify-items: center;
+
+          p.formErrorMessage {
+            visibility: visible;
+            color: #ff5c5c;
+            text-transform: initial;
+          }
+
+          p {
+            text-transform: uppercase;
+          }
+
+          .inputWrap {
+            position: relative;
+
+            input {
+              width: 100%;
+              height: 58px;
+              border: none;
+              background-color: #f2f2f2;
+              padding:25px 7px;
+              width: 280px;
+            }
+
+            button {
+              position: absolute;
+              top:0;
+              right: 0;
+              width: 58px;
+              height: 58px;
+              float: right;
+              border: none;
+              background-color: #e6e6e6;
+              i.fa-phone {
+                width: 18px;
+                height: 18px;
+                //transform: rotateX(90deg);
+              }
+
+              &:hover {
+                background-color: #a6a6a6;
+              }
+            }
+          }
+        }
+      }
+
+    }
+
+    .form__visitSights {
+      order: 5;
+
+
+      input[type="checkbox"] {
+        display: none;
+      }
+
+      label {
+        color: #000;
+        cursor: default;
+        font-weight: bold;
+        line-height: 30px;
+        padding: 10px 0;
+        vertical-align: middle;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      label:before {
+        content: " ";
+        color: #000;
+        display: inline-block;
+        /* шрифт Awesome*/
+        //font: 20px/30px FontAwesome;
+        font-family: FontAwesome;
+        margin-right: 15px;
+        position: relative;
+        text-align: center;
+        text-indent: 0px;
+        width: 30px;
+        height: 30px;
+        background: #f2f2f2;
+        border: 1px solid #e3e3e3;
+        border-radius: 20%;
+        border-image: initial;
+        vertical-align: middle;
+      }
+
+      input:checked + label:before {
+        /* глифон - галочка */
+        content: "\f00c";
+      }
+
+      input:disabled + label:before {
+        background: #eee;
+        color: #aaa;
+      }
+
+
+    }
+
+    .form__describeEmotions {
+      order: 6;
+
+      p.required {
+        display: none;
+      }
+
+      form {
         width: 100%;
-        margin: 15px 0;
-        display: grid;
-        grid-template-columns: 30% 70%;
-        grid-template-rows: auto;
-        //justify-items: center;
 
-        span {
-          text-align: left;
-          text-transform: uppercase;
-          font-size: 14px;
+        textarea {
+          width: 100%;
+          min-height: 180px;
+          background-color: #f2f2f2;
+          font-weight: bold;
+          color: #000;
+          padding: 20px 10px;
+          font-size: 18px;
+          border: none;
         }
 
       }
 
-    }
-
-  }
-
-  .form__contactInfo {
-    order: 3;
-
-    form {
-      div.contactInfoWrap {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-        justify-items: center;
-
-        p.formErrorMessage {
-          visibility: visible;
-          color: #ff5c5c;
-          text-transform: initial;
-        }
-
-         p {
-          text-transform: uppercase;
-        }
-
-        .inputWrap {
-          position: relative;
-
-          input {
-            width: 100%;
-            height: 58px;
-            border: none;
-            background-color: #f2f2f2;
-            padding:25px 7px;
-            width: 280px;
-          }
-
-          button {
-            position: absolute;
-            top:0;
-            right: 0;
-            width: 58px;
-            height: 58px;
-            float: right;
-            border: none;
-            background-color: #e6e6e6;
-            i.fa-phone {
-              width: 18px;
-              height: 18px;
-              //transform: rotateX(90deg);
-            }
-
-            &:hover {
-              background-color: #a6a6a6;
-            }
-          }
-        }
+      a.blueButton {
+        margin-top: 50px;
       }
     }
 
   }
-
-  .form__visitSights {
-    order: 5;
-
-
-    input[type="checkbox"] {
-      display: none;
-    }
-
-    label {
-      color: #000;
-      cursor: default;
-      font-weight: bold;
-      line-height: 30px;
-      padding: 10px 0;
-      vertical-align: middle;
-
-      &:hover {
-        cursor: pointer;
-      }
-    }
-
-    label:before {
-      content: " ";
-      color: #000;
-      display: inline-block;
-      /* шрифт Awesome*/
-      //font: 20px/30px FontAwesome;
-      font-family: FontAwesome;
-      margin-right: 15px;
-      position: relative;
-      text-align: center;
-      text-indent: 0px;
-      width: 30px;
-      height: 30px;
-      background: #f2f2f2;
-      border: 1px solid #e3e3e3;
-      border-radius: 20%;
-      border-image: initial;
-      vertical-align: middle;
-    }
-
-    input:checked + label:before {
-      /* глифон - галочка */
-      content: "\f00c";
-    }
-
-    input:disabled + label:before {
-      background: #eee;
-      color: #aaa;
-    }
-
-
-  }
-  .form__describeEmotions {
-    order: 6;
-
-    p.required {
-      display: none;
-    }
-
-    textarea {
-      width: 279px;
-      height: 160px;
-      background-color: #f2f2f2;
-      font-weight: bold;
-      color: #000;
-      padding: 20px 10px;
-      font-size: 18px;
-      border: none;
-    }
-
-    a.blueButton {
-      margin-top: 50px;
-    }
-  }
-
 }
 
 
