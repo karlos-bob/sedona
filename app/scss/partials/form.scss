@@ -3,9 +3,18 @@
   //
   .formContent {
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
+
+    display: grid;
+    grid-template-areas:
+            "bgImageWrap--form"
+            "intro"
+            "form__impression"
+            "form__name"
+            "form__contactInfo"
+            "form__visitSights"
+            "form__describeEmotions";
+    grid-template-rows: repeat(7, auto);
+    grid-template-columns: 1fr;
 
     & > div {
       position: relative;
@@ -13,6 +22,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      //padding: 25px 5%;
       padding: 25px 5%;
 
       &:after {
@@ -47,19 +57,21 @@
 
     .bgImageWrap--form {
       min-height: 160px;
+      grid-area: bgImageWrap--form;
 
       &::after {
         display: none;
       }
     }
 
+    .intro {
+      padding: 10% 0 5%;
+      //order: 1;
+      grid-area: intro;
 
-
-    .intro_ {
-      padding: 10% 0 0;
-      order: 1;
       .introTextWrap {
         padding: 0;
+        max-width: 510px;
         &:after {
           display: none;
         }
@@ -67,7 +79,8 @@
     }
 
     .form__impression {
-      order: 4;
+      //order: 4;
+      grid-area: form__impression;
 
      p {
        margin: 5px 0 ;
@@ -78,6 +91,11 @@
 
        label {
          font-weight: bold;
+
+         &:hover {
+           cursor: pointer;
+         }
+
          &:before {
            content: " ";
            color: #000;
@@ -106,7 +124,6 @@
          /* глифон - галочка */
          content: "\f111";
 
-
        }
 
        input:disabled + label:before {
@@ -119,7 +136,8 @@
     }
 
     .form__name {
-      order: 2;
+      //order: 2;
+      grid-area: form__name;
 
       form {
         display: flex;
@@ -137,6 +155,14 @@
             text-align: left;
             text-transform: uppercase;
             font-size: 14px;
+            line-height: 58px;
+          }
+
+          input {
+            height: 58px;
+            border: none;
+            background-color: #f2f2f2;
+            padding:25px 10px;
           }
 
         }
@@ -146,14 +172,20 @@
     }
 
     .form__contactInfo {
-      order: 3;
+      //order: 3;
+      grid-area: form__contactInfo;
 
       form {
-        div.contactInfoWrap {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        .contactFormInner {
           display: grid;
           grid-template-columns: 1fr;
           grid-template-rows: auto;
           justify-items: center;
+          //width: 100%;
 
           p.formErrorMessage {
             visibility: visible;
@@ -163,18 +195,20 @@
 
           p {
             text-transform: uppercase;
+            line-height: 58px;
           }
 
           .inputWrap {
             position: relative;
+            width: 100%;
 
             input {
-              width: 100%;
+              //width: 100%;
               height: 58px;
               border: none;
               background-color: #f2f2f2;
               padding:25px 7px;
-              width: 280px;
+              width: 100%;
             }
 
             button {
@@ -203,61 +237,85 @@
     }
 
     .form__visitSights {
-      order: 5;
+      //order: 5;
+      grid-area: form__visitSights;
 
+      form {
+        width: 100%;
+        display: -webkit-flex; /* Safari */
+        -webkit-flex-wrap: wrap; /* Safari 6.1+ */
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
 
-      input[type="checkbox"] {
-        display: none;
-      }
+        p {
+          min-width: 257px;
+          display: flex;
+          flex-direction: row;
+          justify-content: start;
 
-      label {
-        color: #000;
-        cursor: default;
-        font-weight: bold;
-        line-height: 30px;
-        padding: 10px 0;
-        vertical-align: middle;
+          input[type="checkbox"] {
+            display: none;
+          }
 
-        &:hover {
-          cursor: pointer;
+          label {
+            color: #000;
+            cursor: default;
+            font-weight: bold;
+            line-height: 55px;
+            font-size: 18px;
+            padding: 10px 0;
+            vertical-align: middle;
+
+            &:hover {
+              cursor: pointer;
+            }
+          }
+
+          label:before {
+            content: " ";
+            color: #000;
+            display: inline-block;
+            /* шрифт Awesome*/
+            //font: 20px/30px FontAwesome;
+            font-family: FontAwesome;
+            margin-right: 15px;
+            position: relative;
+            text-align: center;
+            text-indent: 0px;
+            width: 55px;
+            height: 55px;
+            background: #f2f2f2;
+            border: 1px solid #e3e3e3;
+            border-radius: 20%;
+            border-image: initial;
+            vertical-align: middle;
+            font-size: 24px;
+          }
+
+          input:checked + label:before {
+            /* глифон - галочка */
+            content: "\f00c";
+          }
+
+          input:disabled + label:before {
+            background: #eee;
+            color: #aaa;
+          }
         }
+
+
       }
 
-      label:before {
-        content: " ";
-        color: #000;
-        display: inline-block;
-        /* шрифт Awesome*/
-        //font: 20px/30px FontAwesome;
-        font-family: FontAwesome;
-        margin-right: 15px;
-        position: relative;
-        text-align: center;
-        text-indent: 0px;
-        width: 30px;
-        height: 30px;
-        background: #f2f2f2;
-        border: 1px solid #e3e3e3;
-        border-radius: 20%;
-        border-image: initial;
-        vertical-align: middle;
-      }
 
-      input:checked + label:before {
-        /* глифон - галочка */
-        content: "\f00c";
-      }
 
-      input:disabled + label:before {
-        background: #eee;
-        color: #aaa;
-      }
 
 
     }
 
     .form__describeEmotions {
-      order: 6;
+      //order: 6;
+      grid-area: form__describeEmotions;
 
       p.required {
         display: none;
