@@ -54,6 +54,15 @@
 
   }
 
+  .contentWrap > .formContent {
+
+    div:after {
+      display: none;
+    }
+
+  }
+
+
 }
 
 // ≥576px ДО
@@ -157,6 +166,11 @@
 
   .contentWrap > .formContent {
 
+    div > h2::before,
+    div > h2::after {
+      display: none;
+    }
+
     .bgImageWrap--form {
       background-size: 340% 340%;
       background-position: 50% 82%;
@@ -232,8 +246,16 @@
 
   }
 
-  .index__interested a {
+  .contentWrap > .indexContent > .index__interested a {
     min-width: 280px;
+  }
+
+  .contentWrap > .formContent {
+
+    div:after {
+      display: none;
+    }
+
   }
 
 }
@@ -450,6 +472,44 @@
 
     }
 
+    .form__name {
+      align-items: flex-end;
+
+    }
+    .form__impression {
+      align-items: flex-start;
+    }
+    .form__name, .form__impression {
+      padding: 25px 10%;
+
+      h2::before, h2::after {
+        display: none;
+      }
+
+    }
+
+    .form__describeEmotions {
+
+      a.blueButton {
+        width: 50%;
+        display: block;
+
+        position: absolute;
+        bottom: 0;
+        left: 5%;
+      }
+
+      p.required {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        right: 5%;
+      }
+    }
+
+
+
+
   }
 
 
@@ -518,16 +578,6 @@
       background-size: 124% 190%;
       //background-position: 50% 90%;
       min-height: 320px;
-
-      img {
-        //max-width: 70%;
-        //max-height: 70%;
-
-        //top: 33%;
-        //bottom: 0;
-        //left: 0;
-        //right: 0;
-      }
 
     }
 

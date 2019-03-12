@@ -73,6 +73,7 @@ $centered: 0 auto;
   //background: url("../img/back-desktop.png") 100% 100% no-repeat;
   background: url("../img/back-desktop.png");
   background-repeat: no-repeat;
+  min-height: 160px;
 
   img {
     object-fit: scale-down;

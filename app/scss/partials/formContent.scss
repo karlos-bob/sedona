@@ -19,9 +19,11 @@
     & > div {
       position: relative;
       width: 100%;
+
       display: flex;
       flex-direction: column;
       align-items: center;
+
       //padding: 25px 5%;
       padding: 25px 5%;
 
@@ -36,12 +38,37 @@
         position: absolute;
       }
 
+      &:last-child::after {
+        display: none;
+      }
+
       h2 {
+        //max-width: 50%;
         font-size: 18px;
         font-weight: bold;
         text-align: center;
         text-transform: uppercase;
         margin-bottom: 20px;
+
+        &::before, &::after {
+          content: '';
+          display: inline-block;
+          max-width: 13%;
+          height: 1px;
+          background-color: #e5e5e5;
+          position: absolute;
+          margin: 0 5%;
+          top: 43px;
+        }
+
+        &::before {
+          left: 0;
+        }
+
+        &::after {
+          right: 0;
+        }
+
       }
 
       form {
@@ -75,6 +102,10 @@
         &:after {
           display: none;
         }
+
+        h1 {
+          font-size: 24px;
+        }
       }
     }
 
@@ -83,7 +114,8 @@
       grid-area: form__impression;
 
      p {
-       margin: 5px 0 ;
+       margin: 15px 0;
+       line-height: 64px;
 
        input[type="radio"] {
          display: none;
@@ -314,15 +346,18 @@
     }
 
     .form__describeEmotions {
-      //order: 6;
       grid-area: form__describeEmotions;
+      position: relative;
 
       p.required {
+        text-transform: uppercase;
+        color: #a6a6a6;
         display: none;
       }
 
       form {
         width: 100%;
+        margin-bottom: 55px;
 
         textarea {
           width: 100%;
@@ -336,10 +371,12 @@
         }
 
       }
-
       a.blueButton {
-        margin-top: 50px;
+        text-transform: uppercase;
       }
+
+
+
     }
 
   }
