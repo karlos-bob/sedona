@@ -512,6 +512,83 @@
 
   }
 
+  .contentWrap > .galleryContent {
+
+    .bgImageWrap--gallery {
+      background-size: 170% 190%;
+      background-position: 50% 90%;
+      min-height: 292px;
+
+      img {
+        top: 33%;
+      }
+
+    }
+
+    .intro {
+      padding: 5% 3% 5%;
+
+      p {
+        max-width: 72%;
+      }
+    }
+
+    .galleryOuter {
+      grid-template-areas:
+              "gallery1 gallery1"
+              "gallery2 gallery3"
+              "gallery4 gallery5";
+
+      grid-template-rows: repeat(3, auto);
+      grid-template-columns: 1fr 1fr;
+
+      .galleryImageWrapper {
+        height: 350px;
+
+        &:nth-child(odd) {
+          .galleryImage >.ImgDescription {
+            background-color: #e3e3e3;
+          }
+
+
+
+        }
+
+        .galleryImage {
+          margin: 0;
+
+          //&:nth-child(2n+1) {
+          //  .ImgDescription {
+          //    background-color: yellow;
+          //  }
+          //}
+
+          .ImgDescription {
+            padding: 5%;
+            background-color: #f2f2f2;
+          }
+
+        }
+
+      }
+
+      .galleryImageWrapper:before,
+      .galleryImageWrapper:last-child::after{
+        display: none;
+      }
+
+      .galleryImageWrapper--1 {
+        height: 480px;
+      }
+
+    }
+
+    .galleryVideo {
+      height: 500px;
+    }
+
+  }
+
 
   footer {
     height: 120px;
