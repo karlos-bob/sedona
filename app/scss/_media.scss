@@ -189,6 +189,14 @@
 
   }
 
+  .contentWrap > .galleryContent {
+    .intro {
+      padding: 10%;
+    }
+
+  }
+
+
   footer {
     height: 246px;
     //padding: 10% 16% 5%;
@@ -541,31 +549,52 @@
 
       grid-template-rows: repeat(3, auto);
       grid-template-columns: 1fr 1fr;
+      padding: 0 5%;
 
       .galleryImageWrapper {
-        height: 350px;
+        min-height: 350px;
+        padding: 0;
 
         &:nth-child(odd) {
-          .galleryImage >.ImgDescription {
+          .ImgDescription {
             background-color: #e3e3e3;
           }
-
-
 
         }
 
         .galleryImage {
           margin: 0;
+          background-size: 100% 100%;
+          background-position: 0 0;
+          //min-height: 270px;
+        }
 
-          //&:nth-child(2n+1) {
-          //  .ImgDescription {
-          //    background-color: yellow;
-          //  }
-          //}
+        .ImgDescription {
+          padding: 2%;
+          background-color: #f2f2f2;
 
-          .ImgDescription {
-            padding: 5%;
-            background-color: #f2f2f2;
+          //flex-direction: row;
+          //justify-content: center;
+          //align-items: center;
+
+          //min-height: 80px;
+
+          .imgCredits,
+          .imgRating {
+            display: inline-block;
+          }
+
+          .imgCredits {
+            float: left;
+          }
+
+          .imgRating {
+            float: right;
+            line-height: 50px;
+
+            p {
+              text-align: right;
+            }
           }
 
         }
@@ -577,8 +606,18 @@
         display: none;
       }
 
-      .galleryImageWrapper--1 {
-        height: 480px;
+      .galleryImageWrapper--big {
+        min-height: 480px;
+
+        .galleryImage--1 {
+          background-size: 100% 100%;
+          background-position: 50% 220%;
+          min-height: 400px;
+        }
+
+        .ImgDescription {
+
+        }
       }
 
     }
@@ -649,7 +688,7 @@
 
   }
 
-  .contentWrap > .formContent {
+ .contentWrap > .formContent {
 
     .bgImageWrap--form {
       background-size: 124% 190%;
@@ -676,6 +715,109 @@
         min-width: 480px;
 
       }
+    }
+
+  }
+
+ .contentWrap > .galleryContent {
+
+   .activeDescription {
+     display: block;
+   }
+
+    .galleryOuter {
+      grid-template-areas:
+              "gallery1 gallery1"
+              "gallery2 gallery3"
+              "gallery4 gallery5";
+
+      grid-template-rows: repeat(3, auto);
+      grid-template-columns: 1fr 1fr;
+      padding: 0 5%;
+
+      .galleryImageWrapper {
+        min-height: 270px;
+        padding: 0;
+
+        &:hover .galleryImage {
+          cursor: pointer;
+        }
+
+        &:hover .ImgDescription {
+          display: block;
+          transition: 0.5s;
+        }
+
+        &:nth-child(odd) {
+          .ImgDescription {
+            background-color: $sedona_gray--transperent;
+          }
+
+        }
+
+        .galleryImage {
+          margin: 0;
+          background-size: 100% 100%;
+          background-position: 0 0;
+          //min-height: 270px;
+        }
+
+
+        .ImgDescription {
+          display: none;
+          padding: 2%;
+          position: absolute;
+          bottom: 0;
+          background-color: $sedona_gray--transperent;
+          color: #fff;
+
+          //flex-direction: row;
+          //justify-content: center;
+          //align-items: center;
+
+          //min-height: 80px;
+
+          .imgCredits,
+          .imgRating {
+            display: inline-block;
+          }
+
+          .imgCredits {
+            float: left;
+          }
+
+          .imgRating {
+            float: right;
+            line-height: 50px;
+
+            p {
+              text-align: right;
+            }
+          }
+
+        }
+
+      }
+
+
+      .galleryImageWrapper--big {
+        min-height: 400px;
+
+        .galleryImage--1 {
+          background-size: 100% 100%;
+          background-position: 50% 220%;
+          height: 100%;
+        }
+
+        .ImgDescription {
+
+        }
+      }
+
+    }
+
+    .galleryVideo {
+      height: 500px;
     }
 
   }

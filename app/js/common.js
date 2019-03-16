@@ -15,6 +15,6 @@ $(function() {
             $('.navSpace').addClass('menu-open');
         }
         isActive = !isActive;
-    })
+    });
 
 });  
